@@ -1,0 +1,155 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background: rgb(52	57 63);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    --font-color: rgb(216 111 230);
+}
+
+h1, h2{
+    color: var(--font-color);
+    font-size: 140%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 230%;
+}
+
+h1 + p{
+    color: white;
+    text-align: center;
+    margin: 0px 113px 50px 113px;
+}
+
+p, code{
+    font-size: 105%;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1px;
+}
+
+div {
+    border: dotted 2px white;
+    width: 32%;
+    margin: 5px 5px 35px 5px;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+h2 {
+    border: 1px solid white;
+    font-size: 150%;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+    position: relative;
+    bottom: 20px;
+    background: rgb(52, 57, 63);
+    padding: 5px;
+    height: 27px;
+}
+
+div:hover, h2:hover {
+    box-shadow: 0 0 10px rgb(216 111 230);
+}
+
+h2, div{
+    transition: all 0.5s ease-in-out;
+}
+
+
+.card-p {
+    color: var(--font-color);
+    position: relative;
+    margin: 0 auto;
+    padding: 0px 20px 0px 20px;
+    flex: 1;
+    font-size: 80%;
+}
+
+.code-box {
+    width: 90%;
+    margin: 10px auto;
+    border: 1px solid rgb(94 70 106);
+    border-radius: 5px;
+    position: relative;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, rgb(94 70 106), rgb(150 89 163));
+
+}
+
+
+code {
+    display: block;
+    padding: 5px;
+    position: relative;
+    color: white;
+    line-height: 24px;
+    user-select: all;
+}
+
+code::selection {
+    background: rgb(112	202	183);
+    color: black;
+}
+
+.code-p {
+    margin: 5px 0;
+}
+
+h3 {
+    text-align: center;
+    color: var(--font-color);
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 992px) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5px;
+        justify-content: space-evenly;
+    }
+
+    div {
+        width: 47%;
+        align-items: center;
+    }
+
+    h1 + p {
+        margin: 42px;
+        line-height: 30px;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    div {
+        width: 98%;
+        align-items: center;
+    }
+
+    h1 + p {
+        margin: 40px;
+        line-height: 30px;
+    }
+
+    .cards {
+        margin: 20px 8px 20px 8px;
+    }
+
+    .card-p {
+        font-size: 100%;
+        line-height: 30px;
+    }
+}
